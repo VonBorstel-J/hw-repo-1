@@ -1,12 +1,11 @@
-
 /* Header */
 header {
     width: 100%;
     min-height: 400px;
     padding-top: 3em;
 }
-#activities header {
-background: no-repeat lightgrey url(runfly.jpg);
+#contact header {
+background: no-repeat lightgrey url(Cliffs/forest_cliff.jpg);
 background-size: cover;
 }
 .main-header {
@@ -57,42 +56,83 @@ background-size: cover;
 
 /* Main */
 
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
-    p{
-                font-family: Arial, Helvetica, sans-serif;
-                
-         }
+/* Formatting the text and headings */
 
-/* Partners */
+h1{
+font-family: Arial, Helvetica, sans-serif;
+color: #9ed034;
+font-weight: 750;
+padding-top: 30px;
+padding-left: 45px;
+}
+            p{
+                 font-family: Arial, Helvetica, sans-serif;
+                 color:rgba(0, 0, 0, 0.963);
+                 padding-top: 10px;
+                 padding-left: 45px;
+            }
+
+/* Formatting the Gallery */
+body {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: auto auto auto;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    justify-content: center;
+    row-gap: 5%;
+    column-gap: 2%;
+  }
+
+  .grid-item {
+    row-gap: 500px;
+    column-gap: 10%;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  
+
+/*Section*/
 
 section {
-width:100%; 
-background-color: #4288C3;
-}
-section #partners {
-    width: 1200px; 
-    padding: 2em 0 2em 0; 
-    margin: 0 auto; 
-    text-align: center;
-}
-    section #partners .partner {
-        display: inline-block;
-        margin: 0 0.75em; 
-        padding: 1.3em 1.5em;
-        background-color: #fff;
-        border-radius: 50%;
+    width:100%; 
+    background-color: #4288C3;
     }
-        section #partners .partner img {
-            width: 90px; 
-            height: 90px; 
+    section #partners {
+        width: 1200px; 
+        padding: 2em 0 2em 0; 
+        margin: 0 auto; 
+        text-align: center;
+    }
+        section #partners .partner {
+            display: inline-block;
+            margin: 0 0.75em; 
+            padding: 1.3em 1.5em;
+            background-color: #fff;
+            border-radius: 50%;
         }
+            section #partners .partner img {
+                width: 90px; 
+                height: 90px; 
+            }
+
+
+
+
+
+
+
+
 
 /* Footer */
 
-footer {
+footer{
 width: 100%; 
 height: 155px; 
 padding-bottom: lem;
@@ -139,49 +179,3 @@ footer #nondisclaimer .copy {
                                  background: #125688;
                                  color:white;
                                 }
-
-/* Activites */ 
-table {
-    width: 1000px;
-    margin: 4em auto 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-}  
-
-    caption {
-        background: #852b1b;
-        height: 40px;
-        color:#fff;
-        font-size: 1.3em; 
-        font-weight: bold;
-        padding-top: 1em;
-    }
-
-        th {
-            background: #bdecff;
-            text-align: center;
-        }
-       
-            tbody {
-                background: #EEFFE6;
-                text-align: center;
-            }
-
-                th,td {
-                    width: 255px; 
-                    height: 75px; 
-                    vertical-align: middle;
-                    border: solid 1px #852B1B
-                }
-
-                    th:first-child {
-                        width: 125px;
-                        height: 50x;
-                        background: #4977D1;
-                        color: #fff; 
-                    }
-
-                        td:first-child {
-                            font-weight: bold;
-                            background: #BDE1FF
-                        }
-                        
