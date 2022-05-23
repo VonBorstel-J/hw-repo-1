@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Font Awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body id="home">
+
+
+<header>
+
+    <div class="main-header">
+        <div class="logo">
+            <img src="cliffs/logo.png" alt="Great Cliffs Logo" width="125">
+
+    </div>
+
+        <div class="logo">
+
+        </div>
+
+
+        <nav class="main-menu">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="cliffs.html">Cliffs</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+</header>
+
+<section id="timeofday">
+    <span> Your Current Local Time: </span>
+    <span id="clock"></span>
+</section>
+
+<main>
+
+<h2>  Introducing California's Greatest Cliffs
+</h2>
+    <h3>What is so unique about California cliffs?</h3>
+<p>
+    California cliffs are one of a kind in the United States where no cliffs are as magnificent and beautiful as them. And California is the only state that have cliffs that fronts all possible environments: sea, river, mountains and canyons. There are four such individual unique cliffs: West Cliff, North Cliff, East Cliff and South Cliff. All offer fantastic overlooking views, recreational areas, camping sites, wildlife watch spots and overnight cabins.</p>
+<h3>
+    Where are these cliffs?
+    </h3>
+    <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily. The closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
+</main>
+
+
+
+<Section>
+   <ul id="album">
+      <!-- <li id="photo">
+            <img src="images/partner1.png" alt="Partner Bus Tours">
+        </li>
+        <li id="photo">
+            <img src="images/partner2.png" alt="Partner Cabin Rental">
+        </li>
+        <li id="photo">
+            <img src="images/partner3.png"  alt="Partner Camping Adventure">
+         </li>
+        <li id="photo">
+            <img src="images/partner4.png" alt="Partner College Tours">
+        </li>
+        <li id="photo">
+            <img src="images/partner5.png" alt="Partner Bike Rentals">
+        </li>
+        <li id="photo">
+            <img src="images/partner6.png"  alt="Partner Tour Group">
+        </li> --> 
+    </ul>
+</Section>
+
+
+<footer>
+    <div id="nondisclaimer"> 
+    <div class="copy">&copy; Copyright 2020 :: GreatCliffs.com
+    </div>
+    <div class="social"> 
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        </div>
+    </div>
+
+    <div id="disclaimer"><p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p> </div>
+
+</footer>
+
+<script>
+    //Create a time data function
+
+    function currentTime()  {
+            //Declare variables
+            var d = new Date(); //Get current date 
+            var hr = d.getHours(); //Get current hours 
+            var min = d.getMinutes(); //Get current minutes
+            var sec = d.getSeconds(); //Get current seconds  
+            var ampm; //Declare empty variables to store AM or PM
+
+    
+        //Add 0 to single digits for seconds 
+        if (sec < 10) {
+            sec = "0" + sec;
+        }
+
+        //Add 0 to single digits for minutes 
+        if (min < 10) {
+            min = "0" + min;
+        }
+
+        if (hr == 12) {
+            ampm = "PM"; //Setting to PM
+        } else if (hr > 12) {
+            hr-= 12; //Dedut 12 from hours greater than 12 (24hr time)
+            ampm= "PM";
+        } else {
+             ampm = "AM";}//Set to AM 
+        
+
+        //Assemble time format to display 
+        var time = hr + ":" + min + ":"  + sec + " " + ampm;
+
+        //Display current local time and time zone on HTML elemnts  
+        document.getElementById("clock").innerText = time; //adding time 
+
+        //Run time data function every 1 second 
+        setInterval(currentTime, 1000); //setting timer
+    }
+        //Initial run of time data function 
+        currentTime();
+
+
+
+//Creating a script for the partners images to be pulled from 
+        function partnersGallery() {
+
+        //Declaring Variables
+        var photos = []; //Declaring an empty array to store image element 
+        var fileNames = []; //Declaring an empty element to store image file names 
+        var imageList = []; //Declare an emplty array to store html list that contain an image
+        var image; //Declaring an empty variable to store the assembled image list codes
+        var openList = "<li id= 'photo'>" //Picking the variable to conatin open list tag
+        var closeList = "</li>"; //Picking the variable to close the list tag
+
+    //creating a loop where the script will pull the images from the file
+        for(var i=0; i<6; i++) {
+            fileNames.push("partner"+(i+1));
+            photos.push("<img src= images/"+fileNames[i]+".png");
+            image = openList + photos[i] + closeList; 
+            imageList.push(image);
+        }
+
+document.getElementById("album").innerHTML = imageList;
+
+    }
+        partnersGallery();
+
+</script>
+
+
+</body>
+</html>

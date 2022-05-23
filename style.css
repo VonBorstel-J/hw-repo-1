@@ -6,24 +6,24 @@ header {
     padding-top: 3em;
 }
 #home header {
-background: no-repeat lightgrey url(cliff_ocean.jpg);
+background: no-repeat lightgrey url(cliffs/cliff_ocean.jpg);
+background-size: cover;
+}
+
+#contact1 header {
+background: no-repeat lightgrey url(cliffs/cliff_rock.jpg);
 background-size: cover;
 }
 
 #contact header {
-background: no-repeat lightgrey url(cliff_rock.jpg);
-background-size: cover;
-}
-
-#contact header {
-    background: no-repeat lightgrey url(Cliffs/forest_cliff.jpg);
+    background: no-repeat lightgrey url(cliffs/forest_cliff.jpg);
     background-size: cover;
     }
 
 
 
 #activities header {
-        background: no-repeat lightgrey url(runfly.jpg);
+        background: no-repeat lightgrey url(images/runfly.jpg);
         background-size: cover;
         }
 
@@ -98,13 +98,16 @@ h1{
 h2{
 font-family: Arial, Helvetica, sans-serif;
 color: #9ed034;
+padding-left: 2%;
 }
 
 h3{
     font-family: Arial, Helvetica, sans-serif;
+    padding-left: 2.5%;
 }
             p{
                 font-family: Arial, Helvetica, sans-serif;
+
          }
 
 
@@ -271,20 +274,20 @@ section {
     width:100%; 
     background-color: #4288C3;
     }
-    section #partners {
+    section #album {
         width: 1200px; 
         padding: 2em 0 2em 0; 
         margin: 0 auto; 
         text-align: center;
     }
-        section #partners .partner {
+        section #album #photo {
             display: inline-block;
             margin: 0 0.75em; 
             padding: 1.3em 1.5em;
             background-color: #fff;
             border-radius: 50%;
         }
-            section #partners .partner img {
+            section #album #photo img {
                 width: 90px; 
                 height: 90px; 
             }
