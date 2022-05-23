@@ -76,7 +76,7 @@
         <li id="photo">
             <img src="partners/partner3.png"  alt="Partner Camping Adventure">
          </li>
-        <liids="photo">
+        <li id="photo">
             <img src="partners/partner4.png" alt="Partner College Tours">
         </li>
         <li id="photo">
@@ -146,17 +146,18 @@
     }
         //Initial run of time data function 
         currentTime();
-</script> 
 
-<script>
+
+
 //Creating a script for the partners images to be pulled from 
+        function partnersGallery() {
 
         //Declaring Variables
         var photos = []; //Declaring an empty array to store image element 
         var fileNames = []; //Declaring an empty element to store image file names 
         var imageList = []; //Declare an emplty array to store html list that contain an image
         var image; //Declaring an empty variable to store the assembled image list codes
-        var openList = "<li id='photo'>" //Picking the variable to conatin open list tag
+        var openList = "<li id= 'photo'>" //Picking the variable to conatin open list tag
         var closeList = "</li>"; //Picking the variable to close the list tag
 
     //creating a loop where the script will pull the images from the file
@@ -169,7 +170,8 @@
 
 
 document.getElementById("album").innerHTML = imageList;
-
+    }
+        partnersGallery();
 
 </script>
 

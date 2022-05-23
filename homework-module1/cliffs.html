@@ -12,7 +12,7 @@
 
 <!--Font Awesome-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style_cliffs.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -78,26 +78,26 @@
 </main> 
 
 <Section>
-    <!--<ul id="partners" >
-        <li class="partner">
-            <img src="partners/partners/partner-bustour.png" alt="Partner Bus Tours">
+    <ul id= "album" >
+       <!-- <li id="photo">
+            <img src="partners/partner1.png" alt="Partner Bus Tours">
         </li>
-        <li class="partner">
-            <img src="partners/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+        <li id="photo">
+            <img src="partners/partner2.png" alt="Partner Cabin Rental">
         </li>
-        <li class="partner">
-            <img src="partners/partners/partner-campingadv.png"  alt="Partner Camping Adventure">
+        <li id="photo">
+            <img src="partners/partner3.png"  alt="Partner Camping Adventure">
          </li>
-        <li class="partner">
-            <img src="partners/partners/partner-collegetours.png" alt="Partner College Tours">
+        <li id="photo">
+            <img src="partners/partner4.png" alt="Partner College Tours">
         </li>
-        <li class="partner">
-            <img src="partners/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+        <li id="photo">
+            <img src="partners/partner5.png" alt="Partner Bike Rentals">
         </li>
-        <li class="partner">
-            <img src="partners/partners/partner-tourgroup.png"  alt="Partner Tour Group">
-        </li>
-    </ul>-->
+        <li id="photo">
+            <img src="partners/partner6.png"  alt="Partner Tour Group">
+        </li> -->
+    </ul>
 </Section>
 
 
@@ -117,5 +117,45 @@
 </footer>
 
 
+
+
+
+<script>
+
+    //Creating a script for the partners images to be pulled from 
+    function partnersGallery() {
+
+    //Declaring Variables
+    var photos = []; //Declaring an empty array to store image element 
+    var fileNames = []; //Declaring an empty element to store image file names 
+    var imageList = []; //Declare an emplty array to store html list that contain an image
+    var image; //Declaring an empty variable to store the assembled image list codes
+    var openList = "<li id= 'photo'>" //Picking the variable to conatin open list tag
+    var closeList = "</li>"; //Picking the variable to close the list tag
+
+//creating a loop where the script will pull the images from the file
+    for(var i=0; i<6; i++) {
+        fileNames.push("partner"+(i+1));
+        photos.push("<img src= partners/"+fileNames[i]+".png");
+        image = openList + photos[i] + closeList; 
+        imageList.push(image);
+    }
+
+
+document.getElementById("album").innerHTML = imageList;
+}
+    partnersGallery();
+
+</script>
+
+
+
+
+
+
+
+
+
 </body>
 
+</html>
