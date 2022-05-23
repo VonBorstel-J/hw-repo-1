@@ -66,25 +66,25 @@
 
 
 <Section>
-    <ul id="partners" >
-        <li class="partner">
-            <img src="partners/partners/partner-bustour.png" alt="Partner Bus Tours">
+    <ul id= "album" >
+       <!-- <li id="photo">
+            <img src="partners/partner1.png" alt="Partner Bus Tours">
         </li>
-        <li class="partner">
-            <img src="partners/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+        <li id="photo">
+            <img src="partners/partner2.png" alt="Partner Cabin Rental">
         </li>
-        <li class="partner">
-            <img src="partners/partners/partner-campingadv.png"  alt="Partner Camping Adventure">
+        <li id="photo">
+            <img src="partners/partner3.png"  alt="Partner Camping Adventure">
          </li>
-        <li class="partner">
-            <img src="partners/partners/partner-collegetours.png" alt="Partner College Tours">
+        <liids="photo">
+            <img src="partners/partner4.png" alt="Partner College Tours">
         </li>
-        <li class="partner">
-            <img src="partners/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+        <li id="photo">
+            <img src="partners/partner5.png" alt="Partner Bike Rentals">
         </li>
-        <li class="partner">
-            <img src="partners/partners/partner-tourgroup.png"  alt="Partner Tour Group">
-        </li>
+        <li id="photo">
+            <img src="partners/partner6.png"  alt="Partner Tour Group">
+        </li> -->
     </ul>
 </Section>
 
@@ -114,10 +114,6 @@
             var min = d.getMinutes(); //Get current minutes
             var sec = d.getSeconds(); //Get current seconds  
             var ampm; //Declare empty variables to store AM or PM
-            var utchr = d.getUTCHours(); //Get current Greenwich Mean Time (GMT)
-            var timeDiff; // To store time difference between GMT hour and Local hour 
-            var adjTimeDiff; // To store time differeence converted to positive number 
-            var timeZone; //To store the 4 time zones (PT,MT,CT,ET)
 
     
         //Add 0 to single digits for seconds 
@@ -133,10 +129,11 @@
         if (hr == 12) {
             ampm = "PM"; //Setting to PM
         } else if (hr > 12) {
-            hr-= 12; //Dedut 12 form hours greater than 12 (24hr time)
+            hr-= 12; //Dedut 12 from hours greater than 12 (24hr time)
+            ampm= "PM";
         } else {
-             ampm = "AM"; //Set to AM 
-        }
+             ampm = "AM";}//Set to AM 
+        
 
         //Assemble time format to display 
         var time = hr + ":" + min + ":"  + sec + " " + ampm;
@@ -149,6 +146,30 @@
     }
         //Initial run of time data function 
         currentTime();
+</script> 
+
+<script>
+//Creating a script for the partners images to be pulled from 
+
+        //Declaring Variables
+        var photos = []; //Declaring an empty array to store image element 
+        var fileNames = []; //Declaring an empty element to store image file names 
+        var imageList = []; //Declare an emplty array to store html list that contain an image
+        var image; //Declaring an empty variable to store the assembled image list codes
+        var openList = "<li id='photo'>" //Picking the variable to conatin open list tag
+        var closeList = "</li>"; //Picking the variable to close the list tag
+
+    //creating a loop where the script will pull the images from the file
+        for(var i=0; i<6; i++) {
+            fileNames.push("partner"+(i+1));
+            photos.push("<img src= partners/"+fileNames[i]+".png");
+            image = openList + photos[i] + closeList; 
+            imageList.push(image);
+        }
+
+
+document.getElementById("album").innerHTML = imageList;
+
 
 </script>
 
