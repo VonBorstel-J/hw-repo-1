@@ -220,7 +220,7 @@ input[type=text], name {
                                 }
                                     input[type=submit] {
                                         width: 10%;
-                                        background-color: #4CAF50;
+                                        /*background-color: #4CAF50;*/
                                         color: white;
                                         padding: 14px 20px;
                                         margin: 8px 0;
@@ -263,12 +263,34 @@ input[type=text], name {
                                                         width: 13%;
                                                         text-align: center;
                                                     }
-                                                            .button {
-                                                                padding-inline-start: 40%;
-                                                                
+                                                            form .button input {
+                                                                width: 8em;
+                                                                height: 2.5em;
+                                                                font-size: 1.2em;
+                                                                font-weight: bold;
+                                                                color: #ffffff; 
+                                                                border: none;
                                                             }
-                                    
-/* Partners */
+
+                                                                .button {
+                                                                    padding-left: 40%;
+                                                                }
+                                                                    
+                                                                    .randomcode { 
+                                                                        padding-left: 30%;
+                                                                    }
+
+
+                                                                    input[type="text"] {
+                                                                        width: 200px;
+                                                                    
+                                                                    }
+                                                                        .randomcode #codes { 
+                                                                            display: inline;
+                                                                                                                   
+                                                                        }
+                                                                        
+                                                                      
 
 section {
     width:100%; 
