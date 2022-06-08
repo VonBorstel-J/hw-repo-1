@@ -364,7 +364,6 @@ footer #nondisclaimer .copy {
                                  color:white;
                                 }
 
-
                                 
 /* Activites */ 
 table {
@@ -409,6 +408,10 @@ table {
                         td:first-child {
                             font-weight: bold;
                             background: #BDE1FF
+                        }
+
+                         .highlight { 
+                            background-color:green;
                         }
                         
 
