@@ -385,7 +385,7 @@ table {
             background: #bdecff;
             text-align: center;
         }
-       
+
             tbody {
                 background: #EEFFE6;
                 text-align: center;
@@ -410,24 +410,25 @@ table {
                             background: #BDE1FF
                         }
 
-                         .highlight { 
-                            background-color:green;
-                        }
-                        
-
 /* Javascript styling */ 
 
- #timeofday {
+#timeofday {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);
     width: auto;
     padding: 1%;
     padding-left: 43%;
- }
+}
 
-  #clock  {
+#clock  {
     font-size:15px;
     font-weight:bold;
     color: blue;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.tdhighlight { 
+    background-color:green;
+}
+
